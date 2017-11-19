@@ -5,47 +5,76 @@ We are working with the following data set: 20. ECoG-based BCI based on cognitiv
 This is the pdf, that explains the dataset: https://lampx.tugraz.at/~bci/database/011-2015/description.pdf
 This is the lincence for this dataset: https://creativecommons.org/licenses/by-nd/4.0/
 
-Outline Research Paper:
+Outline Research Paper: </br>
 Brief Intro to BCIs:
+<ol>
 •	Three Components: (joao)
-  o	Recording 
-  o	Processing Data
-  o	Classifying the Data
+  <ol>
+  <li> Recording </li>
+  <li> Processing Data </li>
+  <li> Classifying the Data </li>
+  </ol>
 •	What can it be used for?
-  o	Science
-  o	Technology
-•	The future
-
+  <ol>
+  <li> Science </br>
+  <li> Technology </li>
+  </ol>
+•	The future </br>
+</ol>
 Classification 
+<ol>
 •	What is it? (joao)
-  o	What is it used for?
-  o	What can be used?
-    	Neural nets
-    	Maybe others
+  <ol>
+  <li>	What is it used for? </li>
+  <li>	What can be used? </li>
+    <ol>
+    <li>	Neural nets </li>
+    <li>	Maybe others </li>
+    </ol>
+  </ol>
 •	Using Neural Networks (joao)
-  o	Components/ Structure
-  o	Is there a preferred setup for BCIs? (Needs more research)
-  o	Activation Function 
-    	Tanh vs. sigmoid vs. ReLU: the shift in the recent years
-    
+ <ol>
+   <li> Components/ Structure </li>
+   <li>	Is there a preferred setup for BCIs? (Needs more research) </li>
+   <li>	Activation Function </li>
+   <ol>
+     	<li> Tanh vs. sigmoid vs. ReLU: the shift in the recent years </li>
+   </ol>
+  </ol>
+</ol>
+
 Data we are working with
-•	Briefly discuss the data being used
-  o	Dr. Mwaura: “Data always tell a story”
-•	Using Neural Networks (our implementation)
-  o	Components/structure
-•	Activation Function
-  o	The use for ReLu and tanh functions. 
-  o	Compare and contrast
-•	Results 
-  o	Compare raw data vs. classified data
+<ol>
+  <li>	Briefly discuss the data being used </li>
+  <ol>
+    <li> Dr. Mwaura: “Data always tell a story” </li>
+  </ol>
+ <li> Using Neural Networks (our implementation) </li>
+  <ol>
+    <li> Components/structure </li>
+  </ol>
+  <li> Activation Function </li>
+  <ol>
+    <li> The use for ReLu and tanh functions. </li>
+    <li> Compare and contrast </li>
+  </ol>
+  <li> Results </li>
+  <ol>
+    <li> Compare raw data vs. classified data </li>
+  </ol>
+</ol>
 Conclusion
-  •	What have we learned?
-  •	Plans for next semester
-  
+<ol>
+  <li>	What have we learned? </li>
+  <li>	Plans for next semester </li>
+</ol>  
 Out line for the code:
-  driver file
-  neural net:
-    learning
-    classifying data
-  activation functions: sigmoid, tanh, ReLu
-  displaying data
+<ol>
+  <li> driver file </li>
+  <li> neural net: </li>
+  <ol>
+    <li> learning </li>
+    <li> classifying data </li>
+  </ol>
+  <li> activation functions: sigmoid, tanh, ReLu </li>
+  <li> displaying data </li>
