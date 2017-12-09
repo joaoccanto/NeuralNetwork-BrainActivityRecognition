@@ -1,15 +1,22 @@
 from activationFunctions import sigmoid
-from gradientFunctions import sigmoidGradient
 import numpy as np
 from scipy import io
 import leather
+from generateWeights import generateWeights
+import dataBreakDown
+from trainingNN import trainingNN
+from processTestData import processTestData
 
-mat = io.loadmat('011-2015-1.mat')
+#mat = io.loadmat('011-2015-1.mat')
+#data = mat['datainmicrovolts']
+#print(data.shape)
 
-data = mat['datainmicrovolts']
-chart = leather.Chart('Dots')
-chart.add_dots(data)
-chart.to_svg('file1.svg')
+trainingData = dataBreakDown.getTrainingDataByPins('011-2015-1.mat', .01, [74, 75])
+testData1 = dataBreakDown.getTestDataByPins('011-2015-1.mat', .30, [74, 75])
+testData2 = dataBreakDown.getTestDataByPins('011-2015-2.mat', .30, [74, 75])
 
-print ("this is the value")
-print (sigmoidGradient(2))
+hiddenLayerWeights, outputLayerWeights = trainingNN(trainingData, [len(trainingData[0]), 3, 1])
+
+processTestData(testData1, hiddenLayerWeights, outputLayerWeights, "TestDataFromSamePool2")
+processTestData(testData2, hiddenLayerWeights, outputLayerWeights, "TestDataFromDifferentPool2")
+

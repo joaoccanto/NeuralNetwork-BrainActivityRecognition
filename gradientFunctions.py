@@ -1,4 +1,4 @@
 from activationFunctions import sigmoid
 
-def sigmoidGradient(z):
+def sigmoidPrime(z):
     return sigmoid(z) * (1 - sigmoid(z))
