@@ -5,9 +5,11 @@ import numpy as np
 
 
 
-def getTrainingdData(dataFile, percentage):
+def getTrainingData(dataFile, percentage, key1, key2, taskNum):
 	mat = io.loadmat(dataFile)
-	data = mat['datainmicrovolts']
+	struct = mat[key1]
+	data = struct[0][taskNum][key2][0][0]
+	#data = mat['datainmicrovolts']
 	numOfRows = len(data)
 	numOfTrainingRows = int (ceil(numOfRows * percentage))
 	trainingData = []
@@ -15,9 +17,11 @@ def getTrainingdData(dataFile, percentage):
 		trainingData.append(data[x])
 	return trainingData
 
-def getTestData(dataFile, percentage):
+def getTestData(dataFile, percentage, key1, key2, taskNum):
 	mat = io.loadmat(dataFile)
-	data = mat['datainmicrovolts']
+	struct = mat[key1]
+	data = struct[0][taskNum][key2][0][0]
+	#data = mat['datainmicrovolts']
 	numOfRows = len(data)
 	numOfTestRows = int (floor(numOfRows * (1 -percentage)))
 	testData = []
@@ -25,9 +29,10 @@ def getTestData(dataFile, percentage):
 		testData.append(data[x])
 	return testData
 
-def getTrainingDataByPins(dataFile, percentage, pins):
+def getTrainingDataByPins(dataFile, percentage, pins, key1, key2, taskNum):
 	mat = io.loadmat(dataFile)
-	data = mat['datainmicrovolts']
+	struct = mat[key1]
+	data = struct[0][taskNum][key2][0][0]
 	numOfRows = len(data)
 	numOfTestRows = int (ceil(numOfRows * percentage))
 	rowData = np.arange(len(pins))
@@ -38,9 +43,10 @@ def getTrainingDataByPins(dataFile, percentage, pins):
 		testData.append(rowData)
 	return testData
 
-def getTestDataByPins(dataFile, percentage, pins):
+def getTestDataByPins(dataFile, percentage, pins, key1, key2, taskNum):
 	mat = io.loadmat(dataFile)
-	data = mat['datainmicrovolts']
+	struct = mat[key1]
+	data = struct[0][taskNum][key2][0][0]
 	numOfRows = len(data)
 	numOfTestRows = int (floor(numOfRows * (1 -percentage)))
 	rowData = np.arange(len(pins))

@@ -1,5 +1,7 @@
 
 import numpy as np
+from activationFunctions import relu
+from activationFunctions import stableSoftMax
 from activationFunctions import sigmoid
 from scipy import io
 
@@ -11,20 +13,21 @@ def processTestData(data, hiddenLayerWeights, outputLayerWeights, fileName):
 	
 	for x in range(0, len(data)):
 	
-		#convert data from milliseconds to seconds
-		data[x] = data[x] / 1000
+		data[x] = data[x]
+		data[x] = np.hstack([data[x], np.ones(1)])
+
 	
 		#summation
 		hiddenLayerInput = np.dot(data[x], hiddenLayerWeights)
 
 		#pass first layer output through activation function
-		hiddenLayerOutput = sigmoid(hiddenLayerInput + bias)
+		hiddenLayerOutput = sigmoid(hiddenLayerInput)
 
 		#summation
 		outputLayerInput = np.dot(hiddenLayerOutput, outputLayerWeights)
 
 		#pass the input through the activation function
-		output = sigmoid(outputLayerInput + bias)
+		output = sigmoid(outputLayerInput)
 		meanOutput = meanOutput + output
 		
 		print("processing ... ")
