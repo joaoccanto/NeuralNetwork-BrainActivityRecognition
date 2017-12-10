@@ -3,8 +3,10 @@ from generateWeights import generateWeights
 import numpy as np
 from activationFunctions import sigmoid
 from gradientFunctions import sigmoidPrime
+from activationFunctions import relu
+from activationFunctions import softMax
+from gradientFunctions import reluPrime
 from scipy import io
-
 
 
 
@@ -75,6 +77,20 @@ def trainingNN(data, layerStructure):
 
 
 ##########################################################################
+def backPropRelu(label, output, hiddenLayerOutput, outputLayerInput, outputLayerWeights, hiddenLayerInput, data, hiddenLayerWeights):
+	delta3 = - (label - output) * reluPrime(outputLayerInput)
+	hiddenLayerOutput.shape = (-1, len(hiddenLayerOutput))
+	dJdW2 = np.dot(hiddenLayerOutput, delta3)
+
+	dJdW2.shape = (len(dJdW2), -1)
+	delta2 = np.multiply(np.dot(outputLayerWeights, delta3.T), reluPrime(hiddenLayerInput))
+	# the arrays need to be reshaped into 2d arrays, to meet the .dot restrictions.
+	data.shape = (-1, len(data)) 
+	delta2.shape = (-1, len(delta2))
+	dJdW1 = np.dot(data, delta2)
+
+	return dJdW1, dJdW2
+
 
 def trainingWithRelu(data, layerStructure):
 	#generate the weights for each layer
@@ -86,16 +102,12 @@ def trainingWithRelu(data, layerStructure):
 	file = open("reluTrainng.txt", "w");
 	
 	for x in range(1):
-		data[x] = data[x]
 		
-
-		print(data.shape)
-
 		#summation
 		hiddenLayerInput = np.dot(data, hiddenLayerWeights)
 
 		#pass first layer output through activation function
-		hiddenLayerOutput = sigmoid(hiddenLayerInput)
+		hiddenLayerOutput = relu(hiddenLayerInput)
 
 		#hiddenLayerOutput = np.hstack([hiddenLayerOutput, np.ones(1)])
 		#summation
@@ -103,12 +115,12 @@ def trainingWithRelu(data, layerStructure):
 
 		
 		#pass the input through the activation function
-		output = sigmoid(outputLayerInput)
+		output = softMax(outputLayerInput)
 
 		error = (label - output) ** 2
 		#gradient descent
 
-		dJdW1, dJdW2 = backProp(label, output, hiddenLayerOutput, outputLayerInput, outputLayerWeights, hiddenLayerInput, data[x], hiddenLayerWeights)
+		dJdW1, dJdW2 = backPropRelu(label, output, hiddenLayerOutput, outputLayerInput, outputLayerWeights, hiddenLayerInput, data, hiddenLayerWeights)
 
 		# here is where the error is at
 		#update the weights
@@ -117,9 +129,9 @@ def trainingWithRelu(data, layerStructure):
 		
 		print("processing ... ")
 
-		file.write("x ==>> %d" % x)
-		file.write("\t error ==> %f" % error)
-		file.write("\t output => %f \n" % output)
+		#file.write("x ==>> %d" % x)
+		#file.write("\t error ==> %f" % error)
+		#file.write("\t output => %f \n" % output)
 		
 	file.close()
 	return hiddenLayerWeights, outputLayerWeights

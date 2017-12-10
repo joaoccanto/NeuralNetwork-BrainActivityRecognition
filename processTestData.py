@@ -1,7 +1,7 @@
 
 import numpy as np
 from activationFunctions import relu
-from activationFunctions import stableSoftMax
+from activationFunctions import softMax
 from activationFunctions import sigmoid
 from scipy import io
 
@@ -14,7 +14,7 @@ def processTestData(data, hiddenLayerWeights, outputLayerWeights, fileName):
 	for x in range(0, len(data)):
 	
 		data[x] = data[x]
-		data[x] = np.hstack([data[x], np.ones(1)])
+		#data[x] = np.hstack([data[x], np.ones(1)])
 
 	
 		#summation

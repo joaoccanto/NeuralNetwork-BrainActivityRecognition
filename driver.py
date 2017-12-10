@@ -21,12 +21,12 @@ from graphData import dotGraph
 #testData1 = dataBreakDown.getTestData('011-2015-1.mat', .30, 'key1', 'key2', 1)
 #testData2 = dataBreakDown.getTestData('011-2015-2.mat', .30, 'key1', 'key2', 1)
 
-trainingData = dataBreakDown.getTrainingData("S02.mat", .1, 'data', 'X', 0)
-testData1 = dataBreakDown.getTestData("S02.mat", .3, 'data', 'X', 0)
-testData2 = dataBreakDown.getTestData("S01.mat", .3, 'data', 'X', 0)
+trainingData = dataBreakDown.getTrainingData("S02.mat", .99, 'data', 'X', 0)
+testData1 = dataBreakDown.getTestData("S01.mat", .01, 'data', 'X', 0)
+testData2 = dataBreakDown.getTestData("S01.mat", .01, 'data', 'X', 2)
 
 
-hiddenLayerWeights, outputLayerWeights = trainingNN(trainingData, [len(trainingData[0]), 5, 1])
+hiddenLayerWeights, outputLayerWeights = trainingWithRelu(np.asarray(trainingData), [len(trainingData[0]), 5, 1])
 
 processTestData(testData1, hiddenLayerWeights, outputLayerWeights, "TestDataFromSamePool2")
 processTestData(testData2, hiddenLayerWeights, outputLayerWeights, "TestDataFromDifferentPool2")
