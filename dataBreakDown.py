@@ -56,3 +56,10 @@ def getTestDataByPins(dataFile, percentage, pins, key1, key2, taskNum):
 			rowData[y] = data[x][y]
 		testData.append(rowData)
 	return testData
+def getMiniBatchData(data, miniBatchSize, iteration):
+
+	miniBatch = []
+	for x in range (0, miniBatchSize):
+		miniBatch.append(data[(miniBatchSize * iteration) + x])
+
+	return np.asarray(miniBatch)

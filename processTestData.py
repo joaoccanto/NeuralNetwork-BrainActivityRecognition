@@ -13,8 +13,7 @@ def processTestData(data, hiddenLayerWeights, outputLayerWeights, fileName):
 	
 	for x in range(0, len(data)):
 	
-		data[x] = data[x]
-		#data[x] = np.hstack([data[x], np.ones(1)])
+		data[x] = np.hstack([data[x], np.ones(1)])
 
 	
 		#summation
@@ -33,11 +32,14 @@ def processTestData(data, hiddenLayerWeights, outputLayerWeights, fileName):
 		print("processing ... ")
 
 		file.write("x ==>> %d" % x)
-		file.write("\t output => %f \n" % output)
+		file.write("\t output1 => %f" % output[0])
+		file.write("\t output2 => %f \n" % output[1])
 
-	meanOutput = meanOutput / len(data)
+	meanOutput1 = meanOutput[0] / len(data)
+	meanOutput2 = meanOutput[1] / len(data)
 
-	file.write("meanOutput ===> % f" % meanOutput)
+	file.write("meanOutput1 ===> %f " % meanOutput1)
+	file.write("meanOutput2 ===> %f " % meanOutput2)
 		
 	file.close()
-	return hiddenLayerWeights, outputLayerWeights
+	return meanOutput1, meanOutput2
