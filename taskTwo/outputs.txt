@@ -1,5 +1,5 @@
 Task Two
-
+		True		False
 Task One: 	 0.164386	 0.835614
 Task Two: 	 0.000075	 0.999925
 Task Three: 	 0.297990	 0.702011
