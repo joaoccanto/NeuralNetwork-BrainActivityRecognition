@@ -13,7 +13,7 @@ def processTestData(data, hiddenLayerWeights, outputLayerWeights, fileName):
 	
 	for x in range(0, len(data)):
 	
-		data[x] = np.hstack([data[x], np.ones(1)])
+		#data[x] = np.hstack([data[x], np.ones(1)])
 
 	
 		#summation

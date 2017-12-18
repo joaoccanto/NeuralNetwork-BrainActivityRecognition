@@ -116,8 +116,8 @@ x ==>> 114	 output1 => 0.500000	 output2 => 0.500000
 x ==>> 115	 output1 => 0.500000	 output2 => 0.500000 
 x ==>> 116	 output1 => 0.500000	 output2 => 0.500000 
 x ==>> 117	 output1 => 0.500000	 output2 => 0.500000 
-x ==>> 118	 output1 => 0.500000	 output2 => 0.500000 
-x ==>> 119	 output1 => 0.500000	 output2 => 0.500000 
+x ==>> 118	 output1 => 0.000070	 output2 => 0.999930 
+x ==>> 119	 output1 => 0.000070	 output2 => 0.999930 
 x ==>> 120	 output1 => 0.500000	 output2 => 0.500000 
 x ==>> 121	 output1 => 0.500000	 output2 => 0.500000 
 x ==>> 122	 output1 => 0.500000	 output2 => 0.500000 
@@ -237,4 +237,4 @@ x ==>> 235	 output1 => 0.500000	 output2 => 0.500000
 x ==>> 236	 output1 => 0.500000	 output2 => 0.500000 
 x ==>> 237	 output1 => 0.500000	 output2 => 0.500000 
 x ==>> 238	 output1 => 0.500000	 output2 => 0.500000 
-meanOutput1 ===> 0.500000 meanOutput2 ===> 0.500000 
+meanOutput1 ===> 0.495816 meanOutput2 ===> 0.504184 

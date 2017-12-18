@@ -16,7 +16,6 @@ def backProp(label, output, hiddenLayerOutput, outputLayerInput, outputLayerWeig
 	delta3.shape = (-1, len(delta3))
 	dJdW2 = np.dot(hiddenLayerOutput.T, delta3)
 
-	#dJdW2.shape = (len(dJdW2), -1)
 	hiddenLayerInput.shape = (len(hiddenLayerInput), -1)
 
 	delta2 = np.dot(outputLayerWeights, delta3.T)
@@ -34,7 +33,7 @@ def backProp(label, output, hiddenLayerOutput, outputLayerInput, outputLayerWeig
 # layerStructure --> an array of 3 ints; each describes number of perceptrons per layer.
 def trainingNN(data, layerStructure):
 	#generate the weights for each layer
-	hiddenLayerWeights = generateWeights(layerStructure[0] + 1, layerStructure[1])
+	hiddenLayerWeights = generateWeights(layerStructure[0], layerStructure[1])
 	outputLayerWeights = generateWeights(layerStructure[1], layerStructure[2])
 	label = [1, 0]
 	bias = 1
@@ -44,7 +43,7 @@ def trainingNN(data, layerStructure):
 	for x in range(0, len(data)):
 		data[x] = data[x]
 		
-		data[x] = np.hstack([data[x], np.ones(1)])
+		#data[x] = np.hstack([data[x], np.ones(1)])
 		
 		#summation
 		hiddenLayerInput = np.dot(data[x], hiddenLayerWeights)
