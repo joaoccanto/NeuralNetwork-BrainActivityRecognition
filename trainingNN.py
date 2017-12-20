@@ -49,7 +49,7 @@ def trainingNN(data, layerStructure):
 		hiddenLayerInput = np.dot(data[x], hiddenLayerWeights)
 
 		#pass first layer output through activation function
-		hiddenLayerOutput = sigmoid(hiddenLayerInput)
+		hiddenLayerOutput = sigmoid(hiddenLayerInput + 1)
 
 		#hiddenLayerOutput = np.hstack([hiddenLayerOutput, np.ones(1)])
 		#summation
@@ -57,7 +57,7 @@ def trainingNN(data, layerStructure):
 
 		
 		#pass the input through the activation function
-		output = sigmoid(outputLayerInput)
+		output = sigmoid(outputLayerInput + 1)
 		
 		error = (label - output) ** 2
 		#gradient descent
@@ -66,7 +66,7 @@ def trainingNN(data, layerStructure):
 
 		# here is where the error is at
 		#update the weights
-		hiddenLayerWeights = hiddenLayerWeights +  (dJdW1 * learningRate)
+		hiddenLayerWeights = hiddenLayerWeights + (dJdW1 * learningRate)
 		outputLayerWeights = outputLayerWeights + (dJdW2 * learningRate)
 		
 		print("training ... ")

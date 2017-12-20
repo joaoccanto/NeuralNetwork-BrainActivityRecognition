@@ -1,62 +1,62 @@
 Task Three
 
-Task One: 	 0.001830	 0.998170
-Task Two: 	 0.000086	 0.999914
-Task Three: 	 0.000074	 0.999926
-Task Four: 	 0.000080	 0.999920
+Task One: 	 0.731059	 0.731059
+Task Two: 	 0.731059	 0.731059
+Task Three: 	 0.044696	 0.983676
+Task Four: 	 0.082573	 0.969790
 
 
-Task One: 	 0.000082	 0.999918
-Task Two: 	 0.000082	 0.999918
-Task Three: 	 0.000073	 0.999927
-Task Four: 	 0.003699	 0.996301
+Task One: 	 0.237838	 0.912544
+Task Two: 	 0.627008	 0.769385
+Task Three: 	 0.107531	 0.960487
+Task Four: 	 0.153131	 0.944106
 
 
-Task One: 	 0.000086	 0.999914
-Task Two: 	 0.000081	 0.999919
-Task Three: 	 0.000082	 0.999918
-Task Four: 	 0.000080	 0.999920
+Task One: 	 0.000101	 0.999990
+Task Two: 	 0.000101	 0.999990
+Task Three: 	 0.119411	 0.956114
+Task Four: 	 0.413032	 0.848446
 
 
-Task One: 	 0.000079	 0.999921
-Task Two: 	 0.000079	 0.999921
-Task Three: 	 0.002028	 0.997973
-Task Four: 	 0.008185	 0.991815
+Task One: 	 0.728055	 0.732351
+Task Two: 	 0.731059	 0.731059
+Task Three: 	 0.020985	 0.992306
+Task Four: 	 0.183795	 0.932623
 
 
-Task One: 	 0.000079	 0.999921
-Task Two: 	 0.002170	 0.997830
-Task Three: 	 0.000079	 0.999921
-Task Four: 	 0.000068	 0.999932
+Task One: 	 0.577726	 0.787481
+Task Two: 	 0.498672	 0.816571
+Task Three: 	 0.406156	 0.850665
+Task Four: 	 0.122954	 0.954806
 
 
-Task One: 	 0.000083	 0.999917
-Task Two: 	 0.002176	 0.997824
-Task Three: 	 0.000081	 0.999919
-Task Four: 	 0.000079	 0.999920
+Task One: 	 0.731059	 0.731059
+Task Two: 	 0.003261	 0.998849
+Task Three: 	 0.471548	 0.826549
+Task Four: 	 0.105416	 0.961281
 
 
-Task One: 	 0.010507	 0.989493
-Task Two: 	 0.000080	 0.999921
-Task Three: 	 0.002068	 0.997932
-Task Four: 	 0.002059	 0.997941
+Task One: 	 0.480589	 0.823210
+Task Two: 	 0.728000	 0.732184
+Task Three: 	 0.194544	 0.929328
+Task Four: 	 0.277727	 0.897927
 
 
-Task One: 	 0.000077	 0.999923
-Task Two: 	 0.000077	 0.999923
-Task Three: 	 0.000074	 0.999926
-Task Four: 	 0.002079	 0.997921
+Task One: 	 0.731059	 0.731059
+Task Two: 	 0.731059	 0.731059
+Task Three: 	 0.067172	 0.975656
+Task Four: 	 0.073191	 0.973098
 
 
-Task One: 	 0.112788	 0.887212
-Task Two: 	 0.000084	 0.999915
-Task Three: 	 0.000078	 0.999922
-Task Four: 	 0.000080	 0.999920
+Task One: 	 0.070886	 0.974204
+Task Two: 	 0.724942	 0.733309
+Task Three: 	 0.065735	 0.975849
+Task Four: 	 0.130532	 0.952493
 
 
-Task One: 	 0.007067	 0.992933
-Task Two: 	 0.000079	 0.999920
-Task Three: 	 0.000076	 0.999923
-Task Four: 	 0.000077	 0.999922
+Task One: 	 0.224965	 0.917305
+Task Two: 	 0.731059	 0.731059
+Task Three: 	 0.205931	 0.924299
+Task Four: 	 0.314579	 0.884587
 
 

@@ -17,16 +17,16 @@ def processTestData(data, hiddenLayerWeights, outputLayerWeights, fileName):
 
 	
 		#summation
-		hiddenLayerInput = np.dot(data[x], hiddenLayerWeights)
+		hiddenLayerInput = np.dot(data[x], hiddenLayerWeights )
 
 		#pass first layer output through activation function
-		hiddenLayerOutput = sigmoid(hiddenLayerInput)
+		hiddenLayerOutput = sigmoid(hiddenLayerInput + 1)
 
 		#summation
 		outputLayerInput = np.dot(hiddenLayerOutput, outputLayerWeights)
 
 		#pass the input through the activation function
-		output = sigmoid(outputLayerInput)
+		output = sigmoid(outputLayerInput + 1)
 		meanOutput = meanOutput + output
 		
 		print("processing ... ")
